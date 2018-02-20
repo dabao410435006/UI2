@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tracy.ui" xmlns:tools="http://schemas.android.com/tools" android:versionName="1.0" android:versionCode="1" android:installLocation="preferExternal">
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+
+  <application
+      android:theme="@style/AppTheme"
+      android:icon="@drawable/app_icon"
+      android:label="@string/app_name"
+      android:isGame="true"
+      android:banner="@drawable/app_banner">
+    <activity android:name=".MainActivity" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".Register" android:parentActivityName=".MainActivity"/>
+    <activity
+        android:name=".User_register"
+        android:windowSoftInputMode="stateHidden"
+        android:parentActivityName=".Register"/>
+    <activity
+        android:name=".Store_register"
+        android:windowSoftInputMode="stateHidden"
+        android:parentActivityName=".Register"/>
+    <activity android:name=".Login" android:parentActivityName=".MainActivity"/>
+    <activity
+        android:name=".Navigation"
+        android:label="@string/title_activity_navigation"
+        android:theme="@style/AppTheme" />
+
+    <activity
+        android:name=".Friend"
+        android:parentActivityName=".Navigation" />
+    <activity
+        android:name=".Chatroom"
+        android:parentActivityName=".Navigation" />
+    <activity
+        android:name=".Setting"
+        android:parentActivityName=".Navigation" />
+    <activity
+        android:name=".Store_navigation"
+        android:label="@string/title_activity_store_navigation"
+        android:theme="@style/AppTheme"></activity>
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyCkxYzooOd8JvVqezUZtNlRP4cynJHPh7A"></meta-data>
+
+
+    <activity android:label="@string/app_name"
+        android:theme="@style/UnityThemeSelector"
+        android:screenOrientation="fullSensor"
+        android:launchMode="singleTask"
+        android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+        android:name="com.tracy.ui.UnityPlayerActivity">
+
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    </activity>
+    <meta-data android:name="unity.build-id" android:value="ec3b634e-3674-4c2c-a6b1-a78ac6ffa7b3" />
+    <meta-data android:name="unity.splash-mode" android:value="0" />
+    <meta-data android:name="unity.splash-enable" android:value="True" />
+    <meta-data android:name="android.max_aspect" android:value="2.1" />
+  </application>
+
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+  <uses-feature
+      android:glEsVersion="0x00020000"
+      android:required="true"/>
+
+  <permission
+      android:name="com.example.permission.MAPS_RECEIVE"
+      android:protectionLevel="signature"/>
+  <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="25" />
+
+  <uses-feature android:name="android.hardware.vulkan" android:required="false" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-feature android:name="android.hardware.camera" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+</manifest>

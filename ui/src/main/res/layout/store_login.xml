@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme1">
+
+    <Button
+        android:id="@+id/store_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/store_register_button"
+        android:onClick="Success"
+
+        android:text="登入"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/store_LV80"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/store_LV20"
+        app:layout_constraintTop_toBottomOf="@+id/store_login_password"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <EditText
+        android:id="@+id/store_login_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/store_item"
+        android:drawableLeft="@mipmap/store_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="請輸入email"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:singleLine="false"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/store_LV80"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/store_LV20"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <EditText
+        android:id="@+id/store_login_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/store_item"
+        android:drawableLeft="@mipmap/store_padlock"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="請輸入6-20位密碼"
+        android:inputType="textPassword"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/store_LV80"
+        app:layout_constraintStart_toStartOf="@+id/store_LV20"
+        app:layout_constraintTop_toBottomOf="@+id/store_login_email" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/store_LV80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/store_LV20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+</android.support.constraint.ConstraintLayout>
