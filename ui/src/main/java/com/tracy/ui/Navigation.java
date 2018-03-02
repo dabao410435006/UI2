@@ -21,6 +21,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     /**
@@ -125,6 +127,8 @@ public class Navigation extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
+            FirebaseAuth.getInstance().signOut();
+            finish();
             startActivity(new Intent(this, Login.class));
         }
 
@@ -195,6 +199,7 @@ public class Navigation extends AppCompatActivity
                     .setMessage("是否退出此應用程式")
                     .setPositiveButton("是",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
+                            finish();
                             MyApplication.getInstance().exit();
                         }
                     })

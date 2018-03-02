@@ -4,7 +4,7 @@
             "outputFile": "D:\\Unity\\Export\\UI2\\ui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\angoo\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\18d5a16274d1e1a6042ec47f55882d45\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\angoo\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\d4138d9fba1504b0e33cb5bd5cca4e76\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\angoo\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\5560363794a59650807022e941b4a8ea\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\angoo\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d65353512a41bc8f87d45cca4810b5f3\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",

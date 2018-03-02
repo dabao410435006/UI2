@@ -22,11 +22,12 @@ public class Register extends AppCompatActivity {
     }
 
     public void User_register(View v){
-
+        finish();
         startActivity(new Intent(this, User_register.class));
 
     }
     public void Store_register(View v){
+        finish();
         startActivity(new Intent(this, Store_register.class));
     }
 

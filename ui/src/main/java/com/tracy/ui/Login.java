@@ -1,5 +1,7 @@
 package com.tracy.ui;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -9,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +31,7 @@ public class Login extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("  ");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.RLpager);
         //getSupportFragmentManager()管理活動內的區塊物件
@@ -88,6 +91,28 @@ public class Login extends AppCompatActivity {
 
             return mFragmentTitleList.get(position);
         }
+    }
+    @Override public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            new AlertDialog.Builder(this)
+                    .setTitle("結束程式")
+                    .setMessage("是否退出此應用程式")
+                    .setPositiveButton("是",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            finish();
+                            MyApplication.getInstance().exit();
+                        }
+                    })
+                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    })
+                    .show();
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+
     }
 
 }

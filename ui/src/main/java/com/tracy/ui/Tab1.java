@@ -110,7 +110,8 @@ public class Tab1 extends Fragment implements OnMapReadyCallback, GoogleApiClien
 
 
         //LatLng傳入並建立經緯度座標
-        LatLng taipei101 = new LatLng(23.964585,121.594198);
+
+        LatLng taipei101 = new LatLng(23.895760,121.535024);
         //先移動視角
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(taipei101,16));
         //在增加標記為101 MarkerOptions()產生具有選項資訊的標記選項物件
@@ -123,7 +124,7 @@ public class Tab1 extends Fragment implements OnMapReadyCallback, GoogleApiClien
         mMap.moveCamera(CameraUpdateFactory.newLatLng(taipei101));
         marker.showInfoWindow();
 
-        LatLng taipeicityhall = new LatLng(23.964893,121.593639);
+        LatLng taipeicityhall = new LatLng(23.894842,121.535049);
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(taipeicityhall,16));
         Marker marker1 = mMap.addMarker(new MarkerOptions()
                 .position(taipeicityhall)
@@ -140,6 +141,7 @@ public class Tab1 extends Fragment implements OnMapReadyCallback, GoogleApiClien
                         .setMessage("是否進入AR介面")
                         .setPositiveButton("是",new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+                                getActivity().finish();
                                 startActivity(new Intent(getActivity(),UnityPlayerActivity.class));
                             }
                         })

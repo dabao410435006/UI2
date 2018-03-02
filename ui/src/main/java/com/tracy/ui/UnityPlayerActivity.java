@@ -116,6 +116,7 @@ public class UnityPlayerActivity extends Activity
     @Override public boolean onKeyUp(int keyCode, KeyEvent event)     { return mUnityPlayer.injectEvent(event); }
     @Override public boolean onKeyDown(int keyCode, KeyEvent event)   {
         if(keyCode == KeyEvent.KEYCODE_BACK){
+            finish();
             startActivity(new Intent(UnityPlayerActivity.this, Navigation.class));
             Toast.makeText(UnityPlayerActivity.this,"退出AR介面",Toast.LENGTH_LONG).show();
         }

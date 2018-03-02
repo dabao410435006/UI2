@@ -19,6 +19,8 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Store_navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     /**
@@ -130,6 +132,8 @@ public class Store_navigation extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.store_logout) {
+            FirebaseAuth.getInstance().signOut();
+            finish();
             startActivity(new Intent(this, Login.class));
         }
 
@@ -143,6 +147,7 @@ public class Store_navigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_set) {
+            finish();
             startActivity(new Intent(this, Setting.class));
         }
 
@@ -192,6 +197,7 @@ public class Store_navigation extends AppCompatActivity
                     .setMessage("是否退出此應用程式")
                     .setPositiveButton("是",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
+                            finish();
                             MyApplication.getInstance().exit();
                         }
                     })
